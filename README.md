@@ -7,3 +7,5 @@ In the end launch the model with the comand in one line: "roslaunch spot/src/myr
 After these manipulations Gazebo opens and shows the model.
 Programm contains xacro for minimization of the code (includes building of legs and describing of joints).
 
+
+![Иллюстрация к проекту](https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiVjIGq0YDlAhVBysQBHbDpBBUQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.technologyreview.com%2Ff%2F614428%2Fboston-dynamics-spot-robot-dog-is-going-on-sale-for-the-first-time%2F&psig=AOvVaw3vpieY-45jbAHRfrfjPP2D&ust=1570210834018098)
