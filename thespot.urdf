@@ -1,0 +1,178 @@
+<?xml version='1.0'?>
+
+	<robot name ="shape_robot">
+
+		 <link name ="body">
+			<visual>
+      	<origin xyz="0 0 0.2" rpy="0 0 0" />
+       		<geometry>
+          	<box size="0.4 0.2 0.1" />
+        	</geometry>
+        		<material name="Cyan">
+          	<color rgba="0 1.0 1.0 1.0"/>
+       			</material>
+      </visual>
+		</link> 
+
+		 <link name ="left_back_big_leg">
+			<visual>
+<origin xyz="-0.05 -0.05 -0.05" rpy="0 -0.7 0" />
+       		<geometry>
+          	<box size="0.2 0.03 0.03" />
+        	</geometry>
+        		<material name="red">
+          	<color rgba="1.00 0 0 1.0"/>
+       			</material>
+      </visual>
+		</link>
+
+		<joint name="joint1" type="revolute">
+       <origin xyz="-0.15 0.2 0.2" rpy="0 0 0"/>
+        <parent link="body"/>
+        <child link="left_back_big_leg"/>
+	<axis xyz = "0 1 0"/>
+        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+    </joint> 
+
+		<link name ="right_back_big_leg"> <!--forward!-->
+			<visual>
+      	<origin xyz="-0.05 -0.05 -0.05" rpy="0 -0.7 0" />
+       		<geometry>
+          	<box size="0.2 0.03 0.03" />
+        	</geometry>
+        		<material name="red">
+          	<color rgba="1.00 0 0 1.0"/>
+       			</material>
+     	</visual>
+		</link>
+
+		 <joint name="joint2" type="revolute">
+       <origin xyz="0.15 0.2 0.2" rpy="0 0 0"/>
+        <parent link="body"/>
+        <child link="right_back_big_leg"/> <!--forward!-->
+	<axis xyz = "0 1 0"/>
+        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+    </joint>
+
+	 <link name ="right_forward_big_leg">
+			<visual>
+      	<origin xyz="-0.05 -0.05 -0.05" rpy="0 -0.7 0" />
+       		<geometry>
+          	<box size=".2 .03 .03" />
+        	</geometry>
+        		<material name="red">
+          	<color rgba="1.00 0 0 1.0"/>
+       			</material>
+      </visual>
+		</link>
+
+	<joint name="joint3" type="revolute">
+       <origin xyz="-0.15 -0.1 0.2" rpy="0 0 0"/>
+        <parent link="body"/>
+        <child link="right_forward_big_leg"/>
+	<axis xyz = "0 1 0"/>
+        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+    </joint>
+
+		<link name ="left_forward_big_leg">
+			<visual>
+      	<origin xyz="-0.05 -0.05 -0.05" rpy="0 -0.7 0" />
+       		<geometry>
+          	<box size="0.2 0.03 0.03" />
+        	</geometry>
+        		<material name="red">
+          	<color rgba="1.00 0 0 1.0"/>
+       			</material>
+      </visual>
+		</link>
+
+	<joint name="joint4" type="revolute">
+       <origin xyz="0.15 -0.1 0.2" rpy="0 0 0"/>
+        <parent link="body"/>
+        <child link="left_forward_big_leg"/>
+	<axis xyz = "0 1 0"/>
+        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+    </joint> 
+<!-- now small legzzz brazzzzarzzzz!-->
+	<link name ="left_back_small_leg">
+			<visual>
+		<origin xyz="0.05 -0.05 -0.05" rpy="0 0.7 0" />
+       		<geometry>
+          	<box size="0.2 0.03 0.03" />
+        	</geometry>
+        		<material name="red">
+          	<color rgba="1.00 0 0 1.0"/>
+       			</material>
+      </visual>
+		</link>
+
+		<joint name="joint5" type="revolute">
+       <origin xyz="-0.13 0.055 -0.1" rpy="0 0 0"/>
+        <parent link="left_back_big_leg"/>
+        <child link="left_back_small_leg"/>
+	<axis xyz = "0 1 0"/>
+        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+    </joint> 
+
+	<link name ="right_back_small_leg">
+			<visual>
+		<origin xyz="0.05 -0.05 -0.05" rpy="0 0.7 0" />
+       		<geometry>
+          	<box size="0.2 0.03 0.03" />
+        	</geometry>
+        		<material name="red">
+          	<color rgba="1.00 0 0 1.0"/>
+       			</material>
+      </visual>
+		</link>
+
+		<joint name="joint6" type="revolute">
+       <origin xyz="-0.15 0.055 -0.1" rpy="0 0 0"/>
+        <parent link="right_back_big_leg"/>
+        <child link="right_back_small_leg"/>
+	<axis xyz = "0 1 0"/>
+        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+    </joint> 
+	
+	<link name ="right_forward_small_leg">
+			<visual>
+		<origin xyz="0.05 -0.05 -0.05" rpy="0 0.7 0" />
+       		<geometry>
+          	<box size="0.2 0.03 0.03" />
+        	</geometry>
+        		<material name="red">
+          	<color rgba="1.00 0 0 1.0"/>
+       			</material>
+      </visual>
+		</link>
+
+		<joint name="joint7" type="revolute">
+       <origin xyz="-0.15 -0.055 -0.1" rpy="0 0 0"/>
+        <parent link="right_forward_big_leg"/>
+        <child link="right_forward_small_leg"/>
+	<axis xyz = "0 1 0"/>
+        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+    </joint> 
+
+	<link name ="left_forward_small_leg">
+			<visual>
+		<origin xyz="0.05 -0.05 -0.05" rpy="0 0.7 0" />
+       		<geometry>
+          	<box size="0.2 0.03 0.03" />
+        	</geometry>
+        		<material name="red">
+          	<color rgba="1.00 0 0 1.0"/>
+       			</material>
+      </visual>
+		</link>
+
+		<joint name="joint8" type="revolute">
+       <origin xyz="-0.15 -0.055 -0.1" rpy="0 0 0"/>
+        <parent link="left_forward_big_leg"/>
+        <child link="left_forward_small_leg"/>
+	<axis xyz = "0 1 0"/>
+        <limit effort="30" velocity="1.0" lower="-2.2" upper="0.7" />
+    </joint> 
+
+
+	</robot>
