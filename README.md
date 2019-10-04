@@ -9,3 +9,4 @@ Programm contains xacro for minimization of the code (includes building of legs 
 
 
 ![Иллюстрация к проекту](https://cdn.technologyreview.com/i/images/spot-robot.jpg?sw=768&cx=0&cy=0&cw=1300&ch=731)
+git ignore testing
